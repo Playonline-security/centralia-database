@@ -6,7 +6,7 @@
 Corporación Universitaria Iberoamericana
 Autores: Yeimy Nohemí Lozano Amaya – Jonathan Uzcátegui González
 
----
+-
 
 📖 Descripción
 
@@ -20,7 +20,7 @@ DML (Data Manipulation Language): inserción, actualización y eliminación de d
 
 DCL (Data Control Language): gestión de permisos y seguridad de acceso.
 
----
+-
 
 🗂️ Estructura del proyecto
 
