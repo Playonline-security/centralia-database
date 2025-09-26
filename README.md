@@ -29,7 +29,7 @@ El repositorio contiene el **script SQL completo** para la creación, gestión y
 
 1. Clonar este repositorio:  
    ```bash
-   [git clone https://github.com/tu-usuario/Centralia-Database.git](https://github.com/Playonline-security/centralia-database.git)
+   https://github.com/tu-usuario/Centralia-Database.git
    ```  
 
 2. Importar el script en **MySQL Workbench**:  
