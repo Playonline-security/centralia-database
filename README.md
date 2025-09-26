@@ -18,19 +18,10 @@ El repositorio contiene el **script SQL completo** para la creación, gestión y
 
 ---
 
-## 🗂️ Estructura del proyecto  
-
-- **/sql** → Contiene el script principal con la creación de la base de datos y tablas.  
-- **/docs** → Diagramas ER y relacional generados en DB Designer y Draw.io.  
-- **/examples** → Consultas de ejemplo (DDL, DML y DCL) ejecutadas en MySQL Workbench.  
-
----
-
 ## ⚙️ Requisitos  
 
 - [MySQL Server](https://dev.mysql.com/downloads/mysql/)  
-- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)  
-- (Opcional) [DB Designer](https://dbdesigner.net/) para visualizar el modelo relacional  
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 ---
 
