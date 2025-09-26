@@ -51,7 +51,7 @@ El repositorio contiene el **script SQL completo** para la creación, gestión y
 ### Crear un cliente  
 ```sql
 INSERT INTO cliente (nombre, apellido, documento, celular, correo) 
-VALUES ('María', 'López', 11223344, 3156789012, 'maria.lopez@mail.com');
+VALUES ('Customer', 'Test', 12345678, 3001234567, 'customer.test@mail.com');
 ```  
 
 ### Consultar paquetes disponibles  
