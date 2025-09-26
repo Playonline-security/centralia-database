@@ -29,13 +29,13 @@ El repositorio contiene el **script SQL completo** para la creación, gestión y
 
 1. Clonar este repositorio:  
    ```bash
-   git clone https://github.com/tu-usuario/Centralia-Database.git
+   [git clone https://github.com/tu-usuario/Centralia-Database.git](https://github.com/Playonline-security/centralia-database.git)
    ```  
 
 2. Importar el script en **MySQL Workbench**:  
    - Abrir MySQL Workbench.  
    - Crear una nueva conexión.  
-   - Ejecutar el archivo `centralia.sql`.  
+   - Ejecutar el archivo `centralia_script.sql`.
 
 3. Verificar la base de datos:  
    ```sql
