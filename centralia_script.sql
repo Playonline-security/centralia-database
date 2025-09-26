@@ -7,10 +7,10 @@
    =========================================================== */
 
 -- Crear la base de datos del proyecto Centralia si no existe
-CREATE DATABASE IF NOT EXISTS `Centralia`;
+CREATE DATABASE IF NOT EXISTS `centralia`;
 
 -- Seleccionar la base de datos Centralia
-USE `Centralia`;
+USE `centralia`;
 
 /* -----------------------------------------------------------
    Tabla CLIENTE:
@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 	`id_cliente` int AUTO_INCREMENT NOT NULL UNIQUE,  -- Identificador único de cada cliente (PK)
 	`nombre` varchar(255) NOT NULL,                  -- Nombre del cliente
 	`apellido` varchar(255) NOT NULL,                -- Apellido del cliente
-	`documento` int NOT NULL UNIQUE,                 -- Documento único de identificación
-	`celular` int NOT NULL,                          -- Número de celular del cliente
+	`documento` bigint NOT NULL UNIQUE,                 -- Documento único de identificación
+	`celular` bigint NOT NULL,                          -- Número de celular del cliente
 	`correo` varchar(255) NOT NULL UNIQUE,           -- Correo electrónico único
 	PRIMARY KEY (`id_cliente`)                       -- Definición de la clave primaria
 );
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `proveedor` (
 	`id_proveedor` int AUTO_INCREMENT NOT NULL UNIQUE,  -- Identificador único del proveedor (PK)
 	`nombre` varchar(255) NOT NULL,                    -- Nombre del proveedor
 	`servicio` varchar(255) NOT NULL,                  -- Tipo de servicio ofrecido (ej: transporte, hospedaje)
-	`celular` int NOT NULL,                            -- Teléfono de contacto
+	`celular` bigint NOT NULL,                            -- Teléfono de contacto
 	`correo` varchar(255) NOT NULL UNIQUE,             -- Correo electrónico único
 	PRIMARY KEY (`id_proveedor`)
 );
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `empleado` (
 	`nombre` varchar(255) NOT NULL,                   -- Nombre del empleado
 	`apellido` varchar(255) NOT NULL,                 -- Apellido del empleado
 	`cargo` varchar(255) NOT NULL,                    -- Cargo del empleado (ej: asesor, administrador)
-	`celular` int NOT NULL,                           -- Número de contacto
+	`celular` bigint NOT NULL,                           -- Número de contacto
 	`correo` varchar(255) NOT NULL UNIQUE,            -- Correo único
 	`fk_empleado_id_sede` int NOT NULL,               -- Relación con la sede donde trabaja
 	PRIMARY KEY (`id_empleado`)
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `paquete_turistico` (
 	`destino` varchar(255) NOT NULL,                     -- Destino del viaje
 	`fecha_inicio` date NOT NULL,                        -- Fecha de inicio del paquete
 	`fecha_fin` date NOT NULL,                           -- Fecha de fin del paquete
-	`precio` decimal(10,2) NOT NULL,                     -- Precio total
+	`precio` decimal(10,0) NOT NULL,                     -- Precio total
 	`disponibilidad` BOOLEAN NOT NULL CHECK (`disponibilidad` IN (0,1)), -- Disponibilidad (1=disponible, 0=no)
 	`fk_paquete_turistico_id_proveedor` int NOT NULL,    -- Relación con proveedor
 	PRIMARY KEY (`id_paquete`)
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `reserva` (
    ----------------------------------------------------------- */
 CREATE TABLE IF NOT EXISTS `pago` (
 	`id_pago` int AUTO_INCREMENT NOT NULL UNIQUE,    -- Identificador del pago (PK)
-	`monto` decimal(10,2) NOT NULL,                  -- Valor del pago
+	`monto` decimal(10,0) NOT NULL,                  -- Valor del pago
 	`fecha_pago` date NOT NULL,                      -- Fecha en que se realizó el pago
 	`medio_pago` varchar(255) NOT NULL,              -- Medio de pago (ej: tarjeta, efectivo)
 	`fk_pago_id_reserva` int NOT NULL,               -- Relación con reserva
