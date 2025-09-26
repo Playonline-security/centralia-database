@@ -1,8 +1,8 @@
 # Centralia Database  
+![MySQL](https://img.shields.io/badge/MySQL-4300C2?style=flat&logo=mysql&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-00758F?style=flat&logo=sql&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 
 📌 **Proyecto académico - Fundamentos de Bases de Datos**  
-Corporación Universitaria Iberoamericana  
-Autores: *Yeimy Nohemí Lozano Amaya* – *Jonathan Uzcátegui González*  
+Corporación Universitaria Iberoamericana
 
 ---
 
