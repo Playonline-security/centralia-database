@@ -22,7 +22,6 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 	`apellido` varchar(100) NOT NULL,                	-- Apellido del cliente
 	`tipo_documento` VARCHAR(20) NOT NULL,             	-- Tipo de documento (CC, CE, PAS, etc.)
 	`numero_documento` VARCHAR(20) NOT NULL UNIQUE,     -- Número único del documento de identificación
-	`documento` varchar(20) NOT NULL UNIQUE,            -- Documento único de identificación
 	`celular` varchar(15) NOT NULL,                     -- Número de celular del cliente
 	`correo` varchar(150) NOT NULL UNIQUE,           	-- Correo electrónico único
 	PRIMARY KEY (`id_cliente`)                       	-- Definición de la clave primaria

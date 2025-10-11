@@ -16,21 +16,21 @@ DROP DATABASE IF EXISTS centralia;
    =========================================================== */
 
 -- INSERT: añadir datos de prueba
-INSERT INTO cliente (nombre, apellido, documento, celular, correo) 
-VALUES ('Juan', 'Pérez', 12345678, 3001234567, 'juan.perez@mail.com');
+INSERT INTO cliente (nombre, apellido, tipo_documento, numero_documento, celular, correo) 
+VALUES ('Juan', 'Pérez', 'CC', '12345678', '3001234567', 'juan.perez@mail.com');
 
-INSERT INTO cliente (nombre, apellido, documento, celular, correo) 
-VALUES ('Johanna', 'González', 87654321, 3109876543, 'johanna.gonzalez@mail.com');
+INSERT INTO cliente (nombre, apellido, tipo_documento, numero_documento, celular, correo) 
+VALUES ('Johanna', 'González', 'CC', '87654321', '3109876543', 'johanna.gonzalez@mail.com');
 
 INSERT INTO proveedor (nombre, servicio, celular, correo)
-VALUES ('Viajes XYZ', 'Transporte', 3101234567, 'contacto@viajesxyz.com');
+VALUES ('Viajes XYZ', 'Transporte', '3101234567', 'contacto@viajesxyz.com');
 
 -- INSERT: añadir un paquete turístico para la demostración
 INSERT INTO paquete_turistico (destino, fecha_inicio, fecha_fin, precio, disponibilidad, fk_paquete_turistico_id_proveedor)
-VALUES ('Cartagena', '2025-10-01', '2025-10-07', 1500000, 1, 1);
+VALUES ('Cartagena', '2025-10-01', '2025-10-07', 1500000.00, 1, 1);
 
 INSERT INTO paquete_turistico (destino, fecha_inicio, fecha_fin, precio, disponibilidad, fk_paquete_turistico_id_proveedor)
-VALUES ('San Andrés', '2025-10-10', '2025-10-15', 3500000, 1, 1);
+VALUES ('San Andrés', '2025-10-10', '2025-10-15', 3500000.00, 1, 1);
 
 -- UPDATE: cambiar disponibilidad de un paquete
 UPDATE paquete_turistico
@@ -89,4 +89,4 @@ WHERE apellido = 'González';
 -- Mostrar paquetes turísticos disponibles con precio menor a 2000000
 SELECT id_paquete, destino, fecha_inicio, fecha_fin, precio
 FROM paquete_turistico
-WHERE disponibilidad = 1 AND precio < 2000000;
+WHERE disponibilidad = 1 AND precio < 2000000.00;
