@@ -44,6 +44,9 @@ WHERE id_cliente = 1;
 /* ===========================================================
 	Comandos DCL (Data Control Language)
    =========================================================== */
+   
+-- Elimina el usuario 'usuario_test' si existe para evitar errores en la creación.
+DROP USER IF EXISTS 'usuario_test'@'localhost';
 
 -- Crear un usuario con permisos específicos
 CREATE USER 'usuario_test'@'localhost' IDENTIFIED BY 'contraseña123';
