@@ -1,51 +1,83 @@
-# 🌐 Centralia - Base de Datos
-
+# Centralia Database  
 ![MySQL](https://img.shields.io/badge/MySQL-4300C2?style=flat&logo=mysql&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-00758F?style=flat&logo=sql&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 
-## 📖 Descripción del proyecto
-Centralia es un **sistema de gestión de información para agencias de viajes**, enfocado en la administración de:
-
-- Clientes 🧑‍💼  
-- Paquetes turísticos 🌴  
-- Reservas 📅  
-- Pagos 💰  
-- Proveedores 🚚  
-- Empleados 👩‍💼  
-- Sedes 🏢  
-
-Este repositorio contiene el **script SQL documentado**, que implementa el **modelo relacional** desarrollado a partir de la **Actividad 2 - Instrumentos de levantamiento de información y modelado de bases de datos**. En dicha actividad se realizó la **identificación del problema**, la definición de objetivos, la construcción de un cronograma y entrevistas semiestructuradas, lo que permitió definir un **modelo ER y relacional sólido**.
+📌 **Proyecto académico - Fundamentos de Bases de Datos**  
+Corporación Universitaria Iberoamericana
 
 ---
 
-## 🗂 Contenido del repositorio
-- `centralia_script.sql` 📜 : Script SQL completo con:
-  - Creación de la base de datos `Centralia`.
-  - Creación de tablas con llaves primarias y foráneas.
-  - Restricciones de integridad (`UNIQUE`, `CHECK`) y normalización.
-  - Comentarios detallados explicando cada tabla y relación.
-  - Ejemplos de comandos DDL, DML y DCL.
+## 📖 Descripción  
 
-- `docs/` 🖼 : Carpeta opcional con **diagramas ER y relacionales**.
+Centralia Database es un proyecto que implementa un modelo relacional para la agencia de viajes **World Tour**, diseñado con el fin de resolver problemas de gestión de datos como duplicidad de registros, pérdida de información y falta de trazabilidad.  
 
----
+El repositorio contiene el **script SQL completo** para la creación, gestión y control de la base de datos, aplicando los comandos de las principales familias de SQL:  
 
-## 🛠 Herramientas utilizadas
-| Herramienta | Uso |
-|-------------|-----|
-| **DB Designer** | Modelado ER y relacional |
-| **MySQL Workbench & MySQL** | Ejecución de script y manipulación de datos |
-| **Git & GitHub** | Control de versiones y documentación |
+- **DDL (Data Definition Language):** definición de tablas, relaciones y restricciones.  
+- **DML (Data Manipulation Language):** inserción, actualización y eliminación de datos.  
+- **DCL (Data Control Language):** gestión de permisos y seguridad de acceso.  
 
 ---
 
-## 🏗 Estructura de la base de datos
-- **Tablas principales**: `cliente`, `proveedor`, `sede`, `empleado`, `paquete_turistico`, `reserva`, `pago`.  
-- **Relaciones y llaves foráneas**: garantizan integridad referencial.  
-- **Restricciones adicionales**: `UNIQUE`, `CHECK` y tipos de datos adecuados.  
+## ⚙️ Requisitos  
+
+- [MySQL Server](https://dev.mysql.com/downloads/mysql/)  
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 ---
 
-## 🚀 Cómo ejecutar el script
-1. Clonar el repositorio:  
-```bash
-git clone https://github.com/tu_usuario/centralia-database.git
+## 🚀 Instalación y uso  
+
+1. Clonar este repositorio:  
+   ```bash
+   https://github.com/Playonline-security/centralia-database.git
+   ```  
+
+2. Importar el script en **MySQL Workbench**:  
+   - Abrir MySQL Workbench.  
+   - Crear una nueva conexión.  
+   - Ejecutar el archivo `centralia_script.sql`.
+
+3. Verificar la base de datos:  
+   ```sql
+   SHOW DATABASES;
+   USE centralia;
+   SHOW TABLES;
+   ```  
+
+---
+
+## 📊 Ejemplos de uso  
+
+### Crear un cliente  
+```sql
+INSERT INTO cliente (nombre, apellido, documento, celular, correo) 
+VALUES ('Customer', 'Test', 12345678, 3001234567, 'customer.test@mail.com');
+```  
+
+### Consultar paquetes disponibles  
+```sql
+SELECT id_paquete, destino, precio 
+FROM paquete_turistico 
+WHERE disponibilidad = 1;
+```  
+
+### Gestionar permisos  
+```sql
+GRANT SELECT, INSERT ON centralia.* TO 'usuario_test'@'localhost';
+```  
+
+---
+
+## 👨‍💻 Autores  
+
+- **Yeimy Nohemí Lozano Amaya**  
+- **Jonathan Uzcátegui González**  
+
+Docente: *Wilson Joven Sarria*  
+Programa: *Fundamentos de Bases de Datos – Ingeniería de Software*  
+
+---
+
+## 📜 Licencia  
+
+Este proyecto es de carácter académico. El código y los diagramas pueden ser reutilizados con fines educativos citando la fuente.  
